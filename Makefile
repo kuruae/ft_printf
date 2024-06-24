@@ -36,6 +36,12 @@ clean :
 fclean : clean
 	$(RM) $(NAME)
 
+run: all
+	@$(CC) $(CFLAGS) main.c $(NAME)
+	./a.out
+	@$(RM) a.out
+
+
 re: fclean all
 
 .PHONY : all clean fclean re
